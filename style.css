@@ -945,3 +945,9 @@ footer p{
 		display: none;
 	}
 }
+
+@media (max-width:500px){
+	.mv .logo02-sp{
+		width: 330px;
+	}
+}
