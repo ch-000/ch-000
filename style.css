@@ -934,4 +934,14 @@ footer p{
 	.menu-btn::before, .menu-btn::after, .map-btn::before, .map-btn::after{
 		display: none;
 	}
+
+	.drink, .food{
+		width:90%;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.recommend, .pickup{
+		display: none;
+	}
 }
