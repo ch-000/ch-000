@@ -3,6 +3,8 @@
 *, ::before, ::after {
 	padding: 0;
 	margin: 0;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -11,6 +13,10 @@ body{
   	font-weight: 400;
   	font-style: normal;
 	color: #333;
+	width: 100%;
+}
+
+main{
 	width: 100%;
 }
 
@@ -501,8 +507,8 @@ opacity: 1;
 }
 
 .food  .img-box img{
-	width: 350px;
-	height: 350px;
+	width: 320px;
+	height: 320px;
 	object-fit: cover;
 	border-radius: 50%;
 	margin-left: 60px;
@@ -736,6 +742,9 @@ dd{
 	flex-wrap: wrap;
 	align-items: center;
 	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 90%;
 }
 
 .message-contents p{
@@ -743,19 +752,12 @@ dd{
 	margin: 50px 0 30px 0;
 }
 
-.message-contents img{
-	width: 400px;
-	height: 400px;
-	object-fit: cover;
-	border-radius: 50% 0% 0 0;
-}
-
 .message-contents figure{
 	margin: 30px auto;
 }
 
 .message-contents iframe{
-	max-width: 100%;
+	max-width: 100%; 
 	aspect-ratio: 16/9;
 }
 
@@ -818,6 +820,7 @@ dd{
 	right: 25px;
 	display: none;
 }
+
 
 canvas{
 	position: absolute;
@@ -926,7 +929,7 @@ footer p{
 		right: 31%;
 	}
 
-	.topbtn{
+	.topbtn img{
 		width: 100px;
 	}
 
@@ -963,6 +966,10 @@ footer p{
 
 @media (max-width:500px){
 
+	body{
+		overflow-x: hidden;
+	}
+
 	header nav{
 		display: none;
 	}
@@ -990,6 +997,22 @@ footer p{
 	.mainimage::after{
 		width: 75%;
 		left: 14%;
+	}
+
+	h2 span::before{
+		width: 12%;
+		padding-top: 12%;
+		left: 29%;
+	}
+
+	.img-box::before{
+		width: 22%;
+		padding-top: 22%;
+	}
+
+	.img-box::after{
+		width: 22%;
+		padding-top: 22%;
 	}
 
 	.menu-btn::after {
@@ -1037,4 +1060,7 @@ footer p{
 		width: 13%;
 	}
 
+	.message-contents iframe{
+		height: auto;
+	}
 }
