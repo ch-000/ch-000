@@ -6,6 +6,14 @@
 	box-sizing: border-box;
 }
 
+body{
+	font-family: "Zen Kaku Gothic New", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+	color: #333;
+	width: 100%;
+}
+
 #loading{
 	position: fixed;
   width: 100%;
@@ -48,13 +56,6 @@
 	}
   }
 
-body{
-	font-family: "Zen Kaku Gothic New", sans-serif;
-  	font-weight: 400;
-  	font-style: normal;
-	color: #333;
-}
-
 section{
 	padding-bottom: 130px;
 	margin-bottom: 100px;
@@ -70,6 +71,19 @@ h2{
 	font-weight: 300;
 	font-size: 50px;
 	text-align: center;
+}
+
+h2 span::before{
+	content: "";
+	display: block;
+	width: 8%;
+	padding-top: 8%;
+	border-radius: 50%;
+	background-color: #FFF5C2;
+	position: absolute;
+	top: -1%;
+	left: 34%;
+	z-index: -1;
 }
 
 img{
@@ -91,10 +105,15 @@ header nav ul{
 	justify-content: space-around;
 }
 
+header nav{
+	width: 100%;
+}
+
 header{
 	padding-top: 20px;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
+	width: 100%;
 }
 
 header li a{
@@ -354,27 +373,20 @@ opacity: 1;
 	transform: rotate(330deg);
 }
 
-.concept .wrapper::before{
-	content: "";
-	display: block;
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	background: none;
-	text-align:center;
-	line-height: 80px;
-	background-color: #FFF5C2;
-	position: absolute;
-	top: -3px;
-	left: 32%;
-	z-index: -1;
-}
-
 .concept h3{
 	margin: 40px 0;
 	line-height: 2;
 	font-weight: 300;
 	font-size: 30px;
+}
+
+.concept p{
+	max-width: 560px;
+	width: 90%;
+	margin: 20px auto;
+	line-height: 2.2;
+	font-size: 18px;
+
 }
 
 .inview{
@@ -385,12 +397,6 @@ opacity: 1;
 .inview.fade-in{
 	opacity: 1;
 	transform: translateY(0);
-}
-
-.concept p{
-	margin: 20px 0;
-	line-height: 2.2;
-	font-size: 18px;	
 }
 
 .slider{
@@ -412,39 +418,14 @@ opacity: 1;
 
 .menu .inner{
 	margin: 100px 0;
-	position: relative;
 }
 
 .menu{
 	margin-bottom: 50px;
 }
 
-.menu .wrapper::before{
-	content: "";
-	display: block;
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	background: none;
-	text-align:center;
-	line-height: 80px;
-	background-color: #FFF5C2;
-	position: absolute;
-	top: -3px;
-	left: 37%;
-	z-index: -1;
-}
-
-.recommend{
-	position: absolute;
-	top: 60px;
-	right: 17%;
-}
-
-.pickup{
-	position: absolute;
-	bottom: 210px;
-	left: 20%;
+.menu h2::before{
+	left: 35%;
 }
 
 .menu h3{
@@ -455,7 +436,11 @@ opacity: 1;
 	font-size: 14px;
 }
 
-.drink img{
+.menu-text{
+	position: relative;
+}
+
+.drink .img-box img{
 	width: 320px;
 	height: 320px;
 	object-fit: cover;
@@ -467,36 +452,46 @@ opacity: 1;
 	display: flex;
 	align-items: center;
 	margin-bottom: 50px;
+	
 }
 
-.drink::before{
+.img-box{
+	position: relative;
+}
+
+.img-box::before{
 	content: "";
 	display: block;
-	width: 80px;
-	height: 80px;
+	width: 18%;
+	padding-top: 18%;
 	border-radius: 50%;
 	background: none;
 	text-align:center;
-	line-height: 80px;
 	background-color: #ffbc93;
 	position: absolute;
-	top: 3px;
-	left: 40px;
+	top: 1%;
+	left: 8%;
 }
 
-.drink::after{
+.img-box::after{
 	content: "";
 	display: block;
-	width: 80px;
-	height: 80px;
+	width: 18%;
+	padding-top: 18%;
 	border-radius: 50%;
 	background: none;
 	text-align:center;
 	line-height: 80px;
 	border: solid 1px #6c6b6b;
 	position: absolute;
-	top: 0px;
-	left: 35px;
+	top: 0%;
+	left: 7%;
+}
+
+.recommend{
+	position: absolute;
+	top: -60px;
+	left: 11%;
 }
 
 .food{
@@ -505,7 +500,7 @@ opacity: 1;
 	align-items: center;
 }
 
-.food img{
+.food  .img-box img{
 	width: 350px;
 	height: 350px;
 	object-fit: cover;
@@ -513,34 +508,38 @@ opacity: 1;
 	margin-left: 60px;
 }
 
-.food::before{
+.food .img-box::before{
 	content: "";
 	display: block;
-	width: 80px;
-	height: 80px;
+	width: 19%;
+	padding-top: 19%;
 	border-radius: 50%;
 	background: none;
 	text-align:center;
-	line-height: 80px;
 	background-color: #ffe589;
 	position: absolute;
-	bottom: 3px;
-	right: 22px;
+	top: 84%;
+	left: 80%;
 }
 
-.food::after{
+.food .img-box::after{
 	content: "";
 	display: block;
-	width: 80px;
-	height: 80px;
+	width: 19%;
+	padding-top: 19%;
 	border-radius: 50%;
 	background: none;
 	text-align:center;
-	line-height: 80px;
 	border: solid 1px #6c6b6b;
 	position: absolute;
-	bottom: 0px;
-	right: 15px;
+	top: 85%;
+	left: 81%;
+}
+
+.pickup{
+	position: absolute;
+	top: -60px;
+    left: 22%;
 }
 
 .menu .wrapper{
@@ -555,8 +554,7 @@ opacity: 1;
 	text-align: center;
 	font-size: 25px;
 	padding: 5px 40px;
-	background-color: #ceb849;
-	
+	background-color: #ceb849;	
 	border-radius: 35px;
 }
 
@@ -571,7 +569,7 @@ opacity: 1;
 	top: calc(50% - 4px);
 	right: 33%;
 	transform: rotate(30deg);
-	width: 12px;
+	width: 2%;
 	height: 1px;
 	background-color: #333;
 }
@@ -582,7 +580,7 @@ opacity: 1;
 	top: 50%;
 	right: 33%;
 	transform: translateY(-50%);
-	width: 70px;
+	width: 9%;
 	height: 1px;
 	background-color: #333;
   }
@@ -613,6 +611,10 @@ opacity: 1;
 .access .inner{
 	margin: 0 auto;
 	padding: 30px 0 0 0;
+}
+
+.access br{
+	display: none;
 }
 
 dl{
@@ -702,7 +704,7 @@ dd{
 	top: calc(50% - 4px);
 	right: 31%;
 	transform: rotate(30deg);
-	width: 12px;
+	width: 2%;
 	height: 1px;
 	background-color: #333;
 }
@@ -713,7 +715,7 @@ dd{
 	top: 50%;
 	right: 31%;
 	transform: translateY(-50%);
-	width: 70px;
+	width: 9%;
 	height: 1px;
 	background-color: #333;
   }
@@ -727,22 +729,6 @@ dd{
 .message .wrapper{
 	margin-bottom: 120px;
 	text-align: center;
-}
-
-.message .wrapper::before{
-	content: "";
-	display: block;
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	background: none;
-	text-align:center;
-	line-height: 80px;
-	background-color: #FFF5C2;
-	position: absolute;
-	top: -3px;
-	left: 32%;
-	z-index: -1;
 }
 
 .message-contents{
@@ -896,21 +882,32 @@ footer p{
 	}
 }
 
+@media (max-width:1000px){
+	.line, .line02{
+		display: none;
+	}
+}
+
 @media (max-width:750px){
+	body{
+		font-size: 1rem;
+	}
+
 	.mv{
-		height: 730px;
+		height: 700px;
 	}
 
 	#pic{
-		height: 500px;
+		height: 380px;
 	}
 	
 	.mainimage::after{
-		height: 500px;
+		
+		height: 380px;
 	}
 
 	.mv .logo02-sp{
-		bottom: 20%;
+		bottom: 33%;
 	}
 
 	.menu h3{
@@ -919,20 +916,37 @@ footer p{
 	
 	.menu p{
 		font-size: 13px;
+	} 
+
+	.menu-btn::before{
+		right: 31%;
 	}
 
-	.recommend {
-		left: 66%;
+	.menu-btn::after{
+		right: 31%;
 	}
-	
-	.pickup{
-		left: 9%;
-	} 
+
+	.topbtn{
+		width: 100px;
+	}
+
+	.map-btn::before{
+		right: 28%;
+	}
+
+	.map-btn::after{
+		right: 28%;
+	}
 }
 
 @media (max-width:700px){
-	.menu-btn::before, .menu-btn::after, .map-btn::before, .map-btn::after{
-		display: none;
+
+	h2{
+		font-size: 30px;
+	}
+
+	.concept h3{
+		font-size: 20px;
 	}
 
 	.drink, .food{
@@ -941,13 +955,86 @@ footer p{
 		justify-content: center;
 	}
 
-	.recommend, .pickup{
-		display: none;
+	.menu-text{
+		margin-top: 80px;
 	}
+
 }
 
 @media (max-width:500px){
+
+	header nav{
+		display: none;
+	}
+
+	.circle-logo{
+		width: 140px;
+		height: 140px;
+		top: -10px;
+	    left: -10px;
+	}
+
+	.openbtn{
+		top: 38px;
+    	left: 30px;
+	}
+
 	.mv .logo02-sp{
 		width: 330px;
 	}
+
+	.mainimage{
+		width: 75%;
+	}
+
+	.mainimage::after{
+		width: 75%;
+		left: 14%;
+	}
+
+	.menu-btn::after {
+        right: 23%;
+		width: 14%;
+    }
+
+	.menu-btn::before {
+        right: 23%;
+    }
+
+	.access dl{
+		font-size: 0.8rem;
+		line-height: 2;
+	}
+
+	.access dt{
+		width: 30%;
+	}
+
+	.access dd{
+		width: 70%;
+		align-self: center;
+	}
+
+	.access br{
+		display: inline;
+	}
+
+	.sns{
+		padding-left: 30px;
+	}
+
+	.sns li {
+		margin-left: 25px;
+	}
+
+	.map-btn::before{
+		right: 19%;
+		width: 3%;
+	}
+	
+	.map-btn::after{
+		right: 19%;
+		width: 13%;
+	}
+
 }
